@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="./pintura.css" />
+
+<style>
+    .my-editor {
+        height: 600px;
+    }
+</style>
+
+<div class="my-editor"></div>
+
+<script type="module">
+    import { appendDefaultEditor } from './pintura.js';
+
+    const pintura = appendDefaultEditor('.my-editor', {
+        // The source image to load
+        src: './my-image.jpeg',
+
+        // This will set a square crop aspect ratio
+        imageCropAspectRatio: 1,
+    });
+</script>
